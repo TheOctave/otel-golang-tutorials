@@ -1,4 +1,4 @@
-package main
+package dice
 
 import (
 	"io"
@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-func rolldice(w http.ResponseWriter, r *http.Request) {
+func Rolldice(w http.ResponseWriter, r *http.Request) {
 	roll := 1 + rand.Intn(6)
 
 	resp := strconv.Itoa(roll) + "\n"
